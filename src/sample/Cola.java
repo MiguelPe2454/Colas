@@ -5,10 +5,14 @@ package sample;
  */
 public class Cola {
     private Nodo frente; //el inicial de la cola
+    private int tamaño;
+    public boolean vacia(){return frente==null;}
+    public int getTamaño(){ return tamaño;}
 
     //Constructor simple
     public Cola(){
         this.frente = null;
+        tamaño = 0;
     }
 
     //Método para insertar siguiente elemento (nodo), el elemento debe colocarse detrás del último nodo
@@ -23,6 +27,7 @@ public class Cola {
             }
             temp.setProx(nuevo);
         }
+        tamaño++;
     }
 
     //Método para mostrar los elementos de la cola

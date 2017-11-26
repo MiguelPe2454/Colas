@@ -44,7 +44,7 @@ public class Cola
         }
     }
     //Método para extraer el elemento del frente
-    public int extraer(){
+    public int Extraer(){
         if(frente == null){
             System.out.println("La cola no tiene valores");
             return 0;
@@ -68,7 +68,7 @@ public class Cola
         }
     }
 
-    public void buscarXValor(int valor){
+    public void BuscarElemento(int valor){
         if(!vacia()){
             int i =1;
             Nodo temp=frente;
@@ -77,12 +77,13 @@ public class Cola
             }else{
                 while(temp!= null){
                     if(valor==temp.getValor()){
-                        System.out.println("El valor de"+valor+ "es igual a :"+i  );
+                        System.out.println("El valor: "+valor+ " se ubica en el lugar: "+i);
                     }
                     i++;
                     temp= temp.getProximo();
                 }
             }
-        } else System.out.println("Valor no encontrado");
+        } else
+            System.out.println("Valor no encontrado");
     }
 }

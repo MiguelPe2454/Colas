@@ -63,6 +63,7 @@ public class Controller implements Initializable{
                 try {
                     int valor=parseInt(BuscarTxt.getText());
                     cola.BuscarElemento(valor);
+                    MensaTxA.setText(cola.BuscarElemento(valor));
                 }catch (Exception e){
                     JOptionPane.showMessageDialog(null,"No has ingresado nada");
                 }

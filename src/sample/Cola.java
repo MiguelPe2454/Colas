@@ -68,22 +68,22 @@ public class Cola
         }
     }
 
-    public void BuscarElemento(int valor){
+    public String BuscarElemento(int valor){
         if(!vacia()){
             int i =1;
             Nodo temp=frente;
             if(valor==frente.getValor()){
-                System.out.println("El valor "+valor+" se ubica en el lugar "+i);
+                return "El valor "+valor+" se ubica en el lugar "+i;
             }else{
                 while(temp!= null){
                     if(valor==temp.getValor()){
-                        System.out.println("El valor: "+valor+ " se ubica en el lugar: "+i);
+                        return "El valor: "+valor+ " se ubica en el lugar: "+i;
                     }
                     i++;
                     temp= temp.getProximo();
                 }
             }
-        } else
-            System.out.println("Valor no encontrado");
+        }
+            return "Elemento no encontrado";
     }
 }
